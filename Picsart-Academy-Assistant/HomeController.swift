@@ -14,8 +14,6 @@ class HomeController: UIViewController {
         view.backgroundColor = .systemPurple
     }
     
-
-    
     /*
     // MARK: - Navigation
 
@@ -25,5 +23,4 @@ class HomeController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

@@ -15,6 +15,9 @@
 		CCBB94352A0E9A220035B2EA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB94342A0E9A220035B2EA /* LoginController.swift */; };
 		CCBB94372A0E9A2C0035B2EA /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB94362A0E9A2C0035B2EA /* RegisterController.swift */; };
 		CCBB94392A0E9A3B0035B2EA /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB94382A0E9A3B0035B2EA /* HomeController.swift */; };
+		CCBB943C2A0EA77C0035B2EA /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB943B2A0EA77C0035B2EA /* AuthHeaderView.swift */; };
+		CCBB943E2A0EE6EF0035B2EA /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB943D2A0EE6EF0035B2EA /* CustomTextField.swift */; };
+		CCBB94402A0EEDFE0035B2EA /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB943F2A0EEDFE0035B2EA /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		CCBB94342A0E9A220035B2EA /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		CCBB94362A0E9A2C0035B2EA /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		CCBB94382A0E9A3B0035B2EA /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		CCBB943B2A0EA77C0035B2EA /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
+		CCBB943D2A0EE6EF0035B2EA /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		CCBB943F2A0EEDFE0035B2EA /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,9 @@
 		CCBB943A2A0E9A5D0035B2EA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CCBB943B2A0EA77C0035B2EA /* AuthHeaderView.swift */,
+				CCBB943D2A0EE6EF0035B2EA /* CustomTextField.swift */,
+				CCBB943F2A0EEDFE0035B2EA /* CustomButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -161,10 +170,13 @@
 			files = (
 				CCBB94332A0E9A160035B2EA /* ForgotPasswordController.swift in Sources */,
 				CCBB94392A0E9A3B0035B2EA /* HomeController.swift in Sources */,
+				CCBB94402A0EEDFE0035B2EA /* CustomButton.swift in Sources */,
 				CCBB94372A0E9A2C0035B2EA /* RegisterController.swift in Sources */,
 				CCBB941E2A0E991B0035B2EA /* AppDelegate.swift in Sources */,
+				CCBB943E2A0EE6EF0035B2EA /* CustomTextField.swift in Sources */,
 				CCBB94202A0E991B0035B2EA /* SceneDelegate.swift in Sources */,
 				CCBB94352A0E9A220035B2EA /* LoginController.swift in Sources */,
+				CCBB943C2A0EA77C0035B2EA /* AuthHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
