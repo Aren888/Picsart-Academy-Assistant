@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		CCBB941E2A0E991B0035B2EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB941D2A0E991B0035B2EA /* AppDelegate.swift */; };
 		CCBB94202A0E991B0035B2EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB941F2A0E991B0035B2EA /* SceneDelegate.swift */; };
-		CCBB94222A0E991B0035B2EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB94212A0E991B0035B2EA /* ViewController.swift */; };
-		CCBB94252A0E991B0035B2EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBB94232A0E991B0035B2EA /* Main.storyboard */; };
 		CCBB94272A0E991C0035B2EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCBB94262A0E991C0035B2EA /* Assets.xcassets */; };
 		CCBB942A2A0E991C0035B2EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCBB94282A0E991C0035B2EA /* LaunchScreen.storyboard */; };
+		CCBB94332A0E9A160035B2EA /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB94322A0E9A160035B2EA /* ForgotPasswordController.swift */; };
+		CCBB94352A0E9A220035B2EA /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB94342A0E9A220035B2EA /* LoginController.swift */; };
+		CCBB94372A0E9A2C0035B2EA /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB94362A0E9A2C0035B2EA /* RegisterController.swift */; };
+		CCBB94392A0E9A3B0035B2EA /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB94382A0E9A3B0035B2EA /* HomeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CCBB941A2A0E991B0035B2EA /* Picsart-Academy-Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picsart-Academy-Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBB941D2A0E991B0035B2EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCBB941F2A0E991B0035B2EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CCBB94212A0E991B0035B2EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CCBB94242A0E991B0035B2EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CCBB94262A0E991C0035B2EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CCBB94292A0E991C0035B2EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CCBB942B2A0E991C0035B2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCBB94322A0E9A160035B2EA /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
+		CCBB94342A0E9A220035B2EA /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		CCBB94362A0E9A2C0035B2EA /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		CCBB94382A0E9A3B0035B2EA /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		CCBB941C2A0E991B0035B2EA /* Picsart-Academy-Assistant */ = {
 			isa = PBXGroup;
 			children = (
-				CCBB941D2A0E991B0035B2EA /* AppDelegate.swift */,
-				CCBB941F2A0E991B0035B2EA /* SceneDelegate.swift */,
-				CCBB94212A0E991B0035B2EA /* ViewController.swift */,
-				CCBB94232A0E991B0035B2EA /* Main.storyboard */,
-				CCBB94262A0E991C0035B2EA /* Assets.xcassets */,
-				CCBB94282A0E991C0035B2EA /* LaunchScreen.storyboard */,
+				CCBB94382A0E9A3B0035B2EA /* HomeController.swift */,
+				CCBB94342A0E9A220035B2EA /* LoginController.swift */,
+				CCBB94362A0E9A2C0035B2EA /* RegisterController.swift */,
+				CCBB94322A0E9A160035B2EA /* ForgotPasswordController.swift */,
+				CCBB943A2A0E9A5D0035B2EA /* Views */,
+				CCBB94312A0E99E80035B2EA /* Supporting */,
 				CCBB942B2A0E991C0035B2EA /* Info.plist */,
 			);
 			path = "Picsart-Academy-Assistant";
+			sourceTree = "<group>";
+		};
+		CCBB94312A0E99E80035B2EA /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				CCBB941D2A0E991B0035B2EA /* AppDelegate.swift */,
+				CCBB941F2A0E991B0035B2EA /* SceneDelegate.swift */,
+				CCBB94262A0E991C0035B2EA /* Assets.xcassets */,
+				CCBB94282A0E991C0035B2EA /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		CCBB943A2A0E9A5D0035B2EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +149,6 @@
 			files = (
 				CCBB942A2A0E991C0035B2EA /* LaunchScreen.storyboard in Resources */,
 				CCBB94272A0E991C0035B2EA /* Assets.xcassets in Resources */,
-				CCBB94252A0E991B0035B2EA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +159,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCBB94222A0E991B0035B2EA /* ViewController.swift in Sources */,
+				CCBB94332A0E9A160035B2EA /* ForgotPasswordController.swift in Sources */,
+				CCBB94392A0E9A3B0035B2EA /* HomeController.swift in Sources */,
+				CCBB94372A0E9A2C0035B2EA /* RegisterController.swift in Sources */,
 				CCBB941E2A0E991B0035B2EA /* AppDelegate.swift in Sources */,
 				CCBB94202A0E991B0035B2EA /* SceneDelegate.swift in Sources */,
+				CCBB94352A0E9A220035B2EA /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CCBB94232A0E991B0035B2EA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CCBB94242A0E991B0035B2EA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CCBB94282A0E991C0035B2EA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +308,6 @@
 				INFOPLIST_FILE = "Picsart-Academy-Assistant/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -300,7 +315,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mrx.Picsart-Academy-Assistant";
+				PRODUCT_BUNDLE_IDENTIFIER = "Picsart-Academy-Assistant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,7 +335,6 @@
 				INFOPLIST_FILE = "Picsart-Academy-Assistant/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -328,7 +342,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "mrx.Picsart-Academy-Assistant";
+				PRODUCT_BUNDLE_IDENTIFIER = "Picsart-Academy-Assistant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
