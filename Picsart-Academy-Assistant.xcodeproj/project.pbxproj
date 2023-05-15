@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC850F222A127E49005B3326 /* WebViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC850F212A127E49005B3326 /* WebViewerController.swift */; };
 		CCBB941E2A0E991B0035B2EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB941D2A0E991B0035B2EA /* AppDelegate.swift */; };
 		CCBB94202A0E991B0035B2EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB941F2A0E991B0035B2EA /* SceneDelegate.swift */; };
 		CCBB94272A0E991C0035B2EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCBB94262A0E991C0035B2EA /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC850F212A127E49005B3326 /* WebViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerController.swift; sourceTree = "<group>"; };
 		CCBB941A2A0E991B0035B2EA /* Picsart-Academy-Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picsart-Academy-Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBB941D2A0E991B0035B2EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCBB941F2A0E991B0035B2EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				CCBB943A2A0E9A5D0035B2EA /* Views */,
 				CCBB94312A0E99E80035B2EA /* Supporting */,
 				CCBB942B2A0E991C0035B2EA /* Info.plist */,
+				CC850F212A127E49005B3326 /* WebViewerController.swift */,
 			);
 			path = "Picsart-Academy-Assistant";
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				CCBB943E2A0EE6EF0035B2EA /* CustomTextField.swift in Sources */,
 				CCBB94202A0E991B0035B2EA /* SceneDelegate.swift in Sources */,
 				CCBB94352A0E9A220035B2EA /* LoginController.swift in Sources */,
+				CC850F222A127E49005B3326 /* WebViewerController.swift in Sources */,
 				CCBB943C2A0EA77C0035B2EA /* AuthHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
