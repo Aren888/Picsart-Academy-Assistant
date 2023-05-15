@@ -16,7 +16,7 @@ class AuthHeaderView: UIView {
     private let logoimageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
-        iv.image = UIImage(named: "logo")
+        iv.image = UIImage(systemName: "person.circle")
         return iv
     }()
     

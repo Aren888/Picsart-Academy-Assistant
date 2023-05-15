@@ -15,6 +15,11 @@ class CustomTextField: UITextField {
         case password
     }
     
+
+    
+ 
+    
+    
     private let authFieldType: CustomTextFiledType
     
     init(fieldType: CustomTextFiledType) {
@@ -47,4 +52,13 @@ class CustomTextField: UITextField {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+
+    
 }
+
+
+
+
+
+
