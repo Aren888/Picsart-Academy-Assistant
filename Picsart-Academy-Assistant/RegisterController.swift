@@ -20,12 +20,20 @@ class RegisterController: UIViewController {
     private let signInButton = CustomButton(title: "Already have an account? Sign In.", fontsize: .med)
     
     private let termsTextView: UITextView = {
+        let attributedString = NSMutableAttributedString(string: "By creating an account, you agree to our Terms & Conditions and you acknowledge that you have read our Privacy Policy.")
+        
+        attributedString.addAttribute(.link, value: "terms://termsAndConditions", range: (attributedString.string as NSString).range(of: "Terms & Conditions"))
+        
+        attributedString.addAttribute(.link, value: "privacy://privacyPolicy", range: (attributedString.string as NSString).range(of: "Privacy Policy"))
+        
         let tv = UITextView()
-        tv.text = "By creating an account, you agree to our Terms & Conditions and you acknowledge that you have read our Privacy Policy."
+        tv.linkTextAttributes = [.foregroundColor: UIColor.systemBlue]
         tv.backgroundColor = .clear
+        tv.attributedText = attributedString
         tv.textColor = .label
         tv.isSelectable = true
         tv.isEditable = false
+        tv.delaysContentTouches = false
         tv.isScrollEnabled = false
         return tv
     }()
@@ -34,6 +42,8 @@ class RegisterController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
+        
+        self.termsTextView.delegate = self
         
         self.signUpButton.addTarget(self, action: #selector(didTapSignUp), for: .touchUpInside)
         self.signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
@@ -63,7 +73,7 @@ class RegisterController: UIViewController {
         self.signUpButton.translatesAutoresizingMaskIntoConstraints = false
         self.termsTextView.translatesAutoresizingMaskIntoConstraints = false
         self.signInButton.translatesAutoresizingMaskIntoConstraints = false
-
+        
         NSLayoutConstraint.activate([
             self.headerView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
             self.headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
@@ -104,12 +114,33 @@ class RegisterController: UIViewController {
     // MARK: - Selectors
     @objc func didTapSignUp() {
         print("DEBUG PRINT:", "didTapSignUp")
-        let webViewer = WebViewerController(with: "https://www.memeatlas.com/images/pepes/pepe-fancy-smoking-cigar-served-by-seething-wojak.jpg")
-        let nav = UINavigationController(rootViewController: webViewer)
-        self.present(nav, animated: true, completion: nil)
+       
     }
     
     @objc private func didTapSignIn() {
         self.navigationController?.popToRootViewController(animated: true)
+    }
+}
+
+extension RegisterController: UITextViewDelegate {
+    func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
+        
+        if URL.scheme == "terms" {
+            self.showWebViewerController(urlString: "https://policies.google.com/terms?hl=en")
+        } else if URL.scheme == "privacy" {
+            self.showWebViewerController(urlString: "https://policies.google.com/privacy?hl=en")
+        }
+        return true
+    }
+    
+    private func showWebViewerController(urlString: String) {
+        let vc = WebViewerController(with: urlString)
+        let nav = UINavigationController(rootViewController: vc )
+        self.present(nav, animated: true, completion: nil)
+    }
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        textView.delegate = nil
+        textView.selectedTextRange = nil
+        textView.delegate = self
     }
 }
