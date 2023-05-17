@@ -21,7 +21,9 @@ class AuthService {
     ///   - completion: A completion with two values...
     ///   - Bool: wasRegistered - Determines if the user was registered and saved in the database correctly
     ///   - Error?: An optional error if firebase provides once
+    ///   
     public func registerUser(with userRequest: RegiserUserRequest, completion: @escaping (Bool, Error?)->Void) {
+        
         let username = userRequest.username
         let email = userRequest.email
         let password = userRequest.password
@@ -51,6 +53,24 @@ class AuthService {
 
                     completion(true, nil)
                 }
+        }
+    }
+    public func signIn(with userRequest: LoginUserRequest, completion: @escaping (Error?) -> Void) {
+        Auth.auth().signIn(withEmail: userRequest.email, password: userRequest.password) { result, error in
+            if let error = error {
+                completion(error)
+                return
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    public func signOut(completion: @escaping (Error?) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(nil)
+        } catch let error {
+            completion(error)
         }
     }
 }

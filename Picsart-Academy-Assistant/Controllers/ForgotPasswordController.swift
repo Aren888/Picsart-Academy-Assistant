@@ -18,6 +18,7 @@ class ForgotPasswordController: UIViewController {
 
     // MARK: - LifeCycle
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.setupUI()
 
@@ -31,6 +32,7 @@ class ForgotPasswordController: UIViewController {
 
     // MARK: - UI Setup
     private func setupUI() {
+        
         self.view.backgroundColor = .systemBackground
 
         self.view.addSubview(headerView)
