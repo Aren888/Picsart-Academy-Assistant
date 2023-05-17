@@ -1,0 +1,6 @@
+framework module Pods_Picsart_Academy_Assistant {
+  umbrella header "Pods-Picsart-Academy-Assistant-umbrella.h"
+
+  export *
+  module * { export * }
+}

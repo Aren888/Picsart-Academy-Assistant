@@ -10,14 +10,14 @@ import UIKit
 class RegisterController: UIViewController {
     
     // MARK: - UI Components
-    private let headerView = AuthHeaderView(title: "Sign Up", subTitile: "Create your account")
+    private let headerView = AuthHeaderView(title: "Sign Up", subTitle: "Create your account")
     
     private let usernameField = CustomTextField(fieldType: .username)
     private let emailField = CustomTextField(fieldType: .email)
     private let passwordField = CustomTextField(fieldType: .password)
     
-    private let signUpButton = CustomButton(title: "Sign Up", hasBackground: true, fontsize: .big)
-    private let signInButton = CustomButton(title: "Already have an account? Sign In.", fontsize: .med)
+    private let signUpButton = CustomButton(title: "Sign Up", hasBackground: true, fontSize: .big)
+    private let signInButton = CustomButton(title: "Already have an account? Sign In.", fontSize: .med)
     
     private let termsTextView: UITextView = {
         let attributedString = NSMutableAttributedString(string: "By creating an account, you agree to our Terms & Conditions and you acknowledge that you have read our Privacy Policy.")
