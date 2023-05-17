@@ -35,7 +35,7 @@ class LoginController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
-        
+//        AlertManager.showInvalidEmailAlert(on: self)
     }
     
     private func setupUI() {

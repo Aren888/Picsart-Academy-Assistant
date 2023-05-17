@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC36E4D92A14ED9E00D888E4 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36E4D82A14ED9E00D888E4 /* AlertManager.swift */; };
 		CC850F222A127E49005B3326 /* WebViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC850F212A127E49005B3326 /* WebViewerController.swift */; };
 		CCBB941E2A0E991B0035B2EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB941D2A0E991B0035B2EA /* AppDelegate.swift */; };
 		CCBB94202A0E991B0035B2EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB941F2A0E991B0035B2EA /* SceneDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC36E4D82A14ED9E00D888E4 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		CC850F212A127E49005B3326 /* WebViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerController.swift; sourceTree = "<group>"; };
 		CCBB941A2A0E991B0035B2EA /* Picsart-Academy-Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picsart-Academy-Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBB941D2A0E991B0035B2EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,9 +51,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC36E4D72A14ED5300D888E4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CCBB94382A0E9A3B0035B2EA /* HomeController.swift */,
+				CCBB94342A0E9A220035B2EA /* LoginController.swift */,
+				CCBB94362A0E9A2C0035B2EA /* RegisterController.swift */,
+				CCBB94322A0E9A160035B2EA /* ForgotPasswordController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		CCBB94112A0E991B0035B2EA = {
 			isa = PBXGroup;
 			children = (
+				CC36E4D82A14ED9E00D888E4 /* AlertManager.swift */,
 				CCBB941C2A0E991B0035B2EA /* Picsart-Academy-Assistant */,
 				CCBB941B2A0E991B0035B2EA /* Products */,
 			);
@@ -68,10 +82,7 @@
 		CCBB941C2A0E991B0035B2EA /* Picsart-Academy-Assistant */ = {
 			isa = PBXGroup;
 			children = (
-				CCBB94382A0E9A3B0035B2EA /* HomeController.swift */,
-				CCBB94342A0E9A220035B2EA /* LoginController.swift */,
-				CCBB94362A0E9A2C0035B2EA /* RegisterController.swift */,
-				CCBB94322A0E9A160035B2EA /* ForgotPasswordController.swift */,
+				CC36E4D72A14ED5300D888E4 /* Controllers */,
 				CCBB943A2A0E9A5D0035B2EA /* Views */,
 				CCBB94312A0E99E80035B2EA /* Supporting */,
 				CCBB942B2A0E991C0035B2EA /* Info.plist */,
@@ -172,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCBB94332A0E9A160035B2EA /* ForgotPasswordController.swift in Sources */,
+				CC36E4D92A14ED9E00D888E4 /* AlertManager.swift in Sources */,
 				CCBB94392A0E9A3B0035B2EA /* HomeController.swift in Sources */,
 				CCBB94402A0EEDFE0035B2EA /* CustomButton.swift in Sources */,
 				CCBB94372A0E9A2C0035B2EA /* RegisterController.swift in Sources */,
