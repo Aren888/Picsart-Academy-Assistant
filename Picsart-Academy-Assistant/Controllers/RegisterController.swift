@@ -73,7 +73,7 @@ class RegisterController: UIViewController {
         self.signUpButton.translatesAutoresizingMaskIntoConstraints = false
         self.termsTextView.translatesAutoresizingMaskIntoConstraints = false
         self.signInButton.translatesAutoresizingMaskIntoConstraints = false
-        
+
         NSLayoutConstraint.activate([
             self.headerView.topAnchor.constraint(equalTo: self.view.layoutMarginsGuide.topAnchor),
             self.headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
@@ -113,31 +113,73 @@ class RegisterController: UIViewController {
     
     // MARK: - Selectors
     @objc func didTapSignUp() {
-        print("DEBUG PRINT:", "didTapSignUp")
-       
+        let registerUserRequest = RegiserUserRequest(
+            username: self.usernameField.text ?? "",
+            email: self.emailField.text ?? "",
+            password: self.passwordField.text ?? ""
+        )
+        
+        // Username check
+        if !Validator.isValidUsername(for: registerUserRequest.username) {
+            AlertManager.showInvalidUsernameAlert(on: self)
+            return
+        }
+        
+        // Email check
+        if !Validator.isValidEmail(for: registerUserRequest.email) {
+            AlertManager.showInvalidEmailAlert(on: self)
+            return
+        }
+        
+        // Password check
+        if !Validator.isPasswordValid(for: registerUserRequest.password) {
+            AlertManager.showInvalidPasswordAlert(on: self)
+            return
+        }
+        
+        AuthService.shared.registerUser(with: registerUserRequest) { [weak self] wasRegistered, error in
+            guard let self = self else { return }
+            
+            if let error = error {
+                AlertManager.showRegistrationErrorAlert(on: self, with: error)
+                return
+            }
+            
+            if wasRegistered {
+                if let sceneDelegate = self.view.window?.windowScene?.delegate as? SceneDelegate {
+                    sceneDelegate.checkAuthentication()
+                }
+            } else {
+                AlertManager.showRegistrationErrorAlert(on: self)
+            }
+        }
     }
     
     @objc private func didTapSignIn() {
         self.navigationController?.popToRootViewController(animated: true)
     }
+    
 }
 
 extension RegisterController: UITextViewDelegate {
+    
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         
         if URL.scheme == "terms" {
-            self.showWebViewerController(urlString: "https://policies.google.com/terms?hl=en")
+            self.showWebViewerController(with: "https://policies.google.com/terms?hl=en")
         } else if URL.scheme == "privacy" {
-            self.showWebViewerController(urlString: "https://policies.google.com/privacy?hl=en")
+            self.showWebViewerController(with: "https://policies.google.com/privacy?hl=en")
         }
+        
         return true
     }
     
-    private func showWebViewerController(urlString: String) {
+    private func showWebViewerController(with urlString: String) {
         let vc = WebViewerController(with: urlString)
-        let nav = UINavigationController(rootViewController: vc )
+        let nav = UINavigationController(rootViewController: vc)
         self.present(nav, animated: true, completion: nil)
     }
+    
     func textViewDidChangeSelection(_ textView: UITextView) {
         textView.delegate = nil
         textView.selectedTextRange = nil

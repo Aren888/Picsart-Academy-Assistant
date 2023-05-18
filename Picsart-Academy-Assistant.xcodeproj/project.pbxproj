@@ -10,6 +10,8 @@
 		19974BD72BCBCBE6FE391EAB /* Pods_Picsart_Academy_Assistant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7EC87F84998C1B8DD3EA04C /* Pods_Picsart_Academy_Assistant.framework */; };
 		CC36E4D92A14ED9E00D888E4 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC36E4D82A14ED9E00D888E4 /* AlertManager.swift */; };
 		CC850F222A127E49005B3326 /* WebViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC850F212A127E49005B3326 /* WebViewerController.swift */; };
+		CCBA770B2A1655CD00A8B7C1 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBA770A2A1655CD00A8B7C1 /* Validator.swift */; };
+		CCBA770D2A16695300A8B7C1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBA770C2A16695300A8B7C1 /* User.swift */; };
 		CCBB941E2A0E991B0035B2EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB941D2A0E991B0035B2EA /* AppDelegate.swift */; };
 		CCBB94202A0E991B0035B2EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCBB941F2A0E991B0035B2EA /* SceneDelegate.swift */; };
 		CCBB94272A0E991C0035B2EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCBB94262A0E991C0035B2EA /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		B7EC87F84998C1B8DD3EA04C /* Pods_Picsart_Academy_Assistant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Picsart_Academy_Assistant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC36E4D82A14ED9E00D888E4 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		CC850F212A127E49005B3326 /* WebViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerController.swift; sourceTree = "<group>"; };
+		CCBA770A2A1655CD00A8B7C1 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
+		CCBA770C2A16695300A8B7C1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CCBB941A2A0E991B0035B2EA /* Picsart-Academy-Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Picsart-Academy-Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCBB941D2A0E991B0035B2EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CCBB941F2A0E991B0035B2EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 			children = (
 				CC36E4D82A14ED9E00D888E4 /* AlertManager.swift */,
 				CCD8DB372A14FE59007265B8 /* AuthService.swift */,
+				CCBA770A2A1655CD00A8B7C1 /* Validator.swift */,
 				CCD8DB392A14FFDD007265B8 /* Models */,
 				CC36E4D72A14ED5300D888E4 /* Controllers */,
 				CCBB943A2A0E9A5D0035B2EA /* Views */,
@@ -143,6 +148,7 @@
 			children = (
 				CCD8DB3A2A15008A007265B8 /* RegiserUserRequest.swift */,
 				CCD8DB3E2A151A48007265B8 /* LoginUserRequest.swift */,
+				CCBA770C2A16695300A8B7C1 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,9 +281,11 @@
 				CC36E4D92A14ED9E00D888E4 /* AlertManager.swift in Sources */,
 				CCBB94392A0E9A3B0035B2EA /* HomeController.swift in Sources */,
 				CCD8DB382A14FE59007265B8 /* AuthService.swift in Sources */,
+				CCBA770D2A16695300A8B7C1 /* User.swift in Sources */,
 				CCD8DB3F2A151A48007265B8 /* LoginUserRequest.swift in Sources */,
 				CCBB94402A0EEDFE0035B2EA /* CustomButton.swift in Sources */,
 				CCBB94372A0E9A2C0035B2EA /* RegisterController.swift in Sources */,
+				CCBA770B2A1655CD00A8B7C1 /* Validator.swift in Sources */,
 				CCBB941E2A0E991B0035B2EA /* AppDelegate.swift in Sources */,
 				CCBB943E2A0EE6EF0035B2EA /* CustomTextField.swift in Sources */,
 				CCD8DB3B2A15008A007265B8 /* RegiserUserRequest.swift in Sources */,
