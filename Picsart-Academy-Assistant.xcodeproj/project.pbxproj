@@ -83,6 +83,7 @@
 				CCBB94342A0E9A220035B2EA /* LoginController.swift */,
 				CCBB94362A0E9A2C0035B2EA /* RegisterController.swift */,
 				CCBB94322A0E9A160035B2EA /* ForgotPasswordController.swift */,
+				CC850F212A127E49005B3326 /* WebViewerController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -116,7 +117,6 @@
 				CCBB943A2A0E9A5D0035B2EA /* Views */,
 				CCBB94312A0E99E80035B2EA /* Supporting */,
 				CCBB942B2A0E991C0035B2EA /* Info.plist */,
-				CC850F212A127E49005B3326 /* WebViewerController.swift */,
 			);
 			path = "Picsart-Academy-Assistant";
 			sourceTree = "<group>";

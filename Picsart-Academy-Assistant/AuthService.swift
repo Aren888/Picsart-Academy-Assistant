@@ -20,6 +20,7 @@ class AuthService {
     ///   - completion: A completion with two values...
     ///   - Bool: wasRegistered - Determines if the user was registered and saved in the database correctly
     ///   - Error?: An optional error if firebase provides once
+    ///   
     public func registerUser(with userRequest: RegiserUserRequest, completion: @escaping (Bool, Error?)->Void) {
         let username = userRequest.username
         let email = userRequest.email
@@ -83,7 +84,26 @@ class AuthService {
     }
     
     public func fetchUser(completion: @escaping (User?, Error?) -> Void) {
+        guard let userUID = Auth.auth().currentUser?.uid else { return }
         
+        let db = Firestore.firestore()
+        
+        db.collection("users")
+            .document(userUID)
+            .getDocument { snapshot, error in
+                if let error = error {
+                    completion(nil, error)
+                    return
+                }
+                
+                if let snapshot = snapshot,
+                   let snapshotData = snapshot.data(),
+                   let username = snapshotData["username"] as? String,
+                   let email = snapshotData["email"] as? String {
+                    let user = User(username: username, email: email, userUID: userUID)
+                    completion(user, nil)
+                }
+                
+            }
     }
-    
 }
