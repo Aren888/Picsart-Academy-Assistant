@@ -7,13 +7,18 @@
 
 import UIKit
 
-class TabController: UITabBarController {
+class TabBarController: UITabBarController {
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBar.backgroundColor = UIColor(red: 1.0, green: 0.894, blue: 0.882, alpha: 1.0)
+        
         setupTabs()
-        self.tabBar.barTintColor = .green
-        self.tabBar.unselectedItemTintColor = .purple
+        
+        
+       
+        
     }
     
     private func setupTabs() {
@@ -22,8 +27,11 @@ class TabController: UITabBarController {
         let chat = self.createNav(with: "Chat", and: UIImage(systemName: "message.circle"), vc: ChatController())
         let homework = self.createNav(with: "Homework", and: UIImage(systemName: "pencil.circle"), vc: HomeworkController())
         let profile = self.createNav(with: "Profile", and: UIImage(systemName: "person.crop.circle.fill"), vc: ProfileController())
+        let newPost = self.createNav(with: "New Post", and: UIImage(systemName: "plus.circle"), vc: NewPostController())
         
-        self.setViewControllers([home, chat, homework, profile], animated: true)
+        self.setViewControllers([home, chat, newPost, homework, profile], animated: true)
+        
+        customTabBarDesign()
     }
     
     private func createNav(with title: String, and image: UIImage?, vc: UIViewController) -> UINavigationController{
@@ -31,9 +39,14 @@ class TabController: UITabBarController {
         nav.tabBarItem.title = title
         nav.tabBarItem.image = image
         nav.viewControllers[0].navigationItem.title = title + "Controller"
-        
         return nav
     }
     
+    private func customTabBarDesign() {
+        self.tabBar.barTintColor = .white
+        self.tabBar.unselectedItemTintColor = .white
+        self.tabBar.unselectedItemTintColor = UIColor(red: 0.6, green: 0.6, blue: 0.6, alpha: 1.0)
+    }
+    
+    
 }
-

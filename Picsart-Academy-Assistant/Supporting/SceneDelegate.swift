@@ -28,11 +28,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if Auth.auth().currentUser == nil {
             self.goToController(with: LoginController())
         } else {
-            self.goToController(with: TabController())
+            self.goToController(with: TabBarController())
         }
     }
     
     private func goToController(with viewController: UIViewController) {
+
         DispatchQueue.main.async { [weak self] in
             UIView.animate(withDuration: 0.25) {
                 self?.window?.layer.opacity = 0

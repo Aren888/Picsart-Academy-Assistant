@@ -11,7 +11,8 @@ class HomeworkController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .darkGray
+        self.view.backgroundColor = UIColor(red: 0.929, green: 0.812, blue: 0.847, alpha: 1.0)
+
         // Do any additional setup after loading the view.
     }
     
