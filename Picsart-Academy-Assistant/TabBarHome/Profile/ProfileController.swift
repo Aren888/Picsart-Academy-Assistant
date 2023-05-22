@@ -1,14 +1,13 @@
 //
-//  HomeController.swift
+//  ProfileViewController.swift
 //  Picsart-Academy-Assistant
 //
-//  Created by Aren Musayelyan on 12.05.23.
+//  Created by Aren Musayelyan on 19.05.23.
 //
 
 import UIKit
 
-class HomeController: UIViewController {
-    
+class ProfileController: UIViewController {
     // MARK: - UI Components
     private let label: UILabel = {
         let label = UILabel()
@@ -24,7 +23,8 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-        
+//        goToTabController()
+
         AuthService.shared.fetchUser { [weak self] user, error in
             guard let self = self else { return }
             if let error = error {
@@ -67,5 +67,6 @@ class HomeController: UIViewController {
             }
         }
     }
-    
+
+  
 }
