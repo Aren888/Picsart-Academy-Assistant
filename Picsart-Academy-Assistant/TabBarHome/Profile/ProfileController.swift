@@ -23,7 +23,8 @@ class ProfileController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupUI()
-        self.view.backgroundColor = UIColor(red: 0.745, green: 0.925, blue: 0.831, alpha: 1.0)
+       
+        customBackgroundColorVC(colorVC: CustomColorVC.self.ProfileController)
 
         AuthService.shared.fetchUser { [weak self] user, error in
             guard let self = self else { return }
@@ -38,10 +39,8 @@ class ProfileController: UIViewController {
         }
     }
     
-    
     // MARK: - UI Setup
     private func setupUI() {
-        self.view.backgroundColor = .systemBackground
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapLogout))
         
         self.view.addSubview(label)
