@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeworkController: UIViewController {
+class HomeworkVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

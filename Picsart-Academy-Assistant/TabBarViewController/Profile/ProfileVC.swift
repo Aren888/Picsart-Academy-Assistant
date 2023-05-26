@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileController: UIViewController {
+class ProfileVC: UIViewController {
     // MARK: - UI Components
     private let label: UILabel = {
         let label = UILabel()

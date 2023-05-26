@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegisterController: UIViewController {
+class RegisterVC: UIViewController {
     
     // MARK: - UI Components
     private let headerView = AuthHeaderView(title: "Sign Up", subTitle: "Create your account")
@@ -161,7 +161,7 @@ class RegisterController: UIViewController {
     
 }
 
-extension RegisterController: UITextViewDelegate {
+extension RegisterVC: UITextViewDelegate {
     
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange, interaction: UITextItemInteraction) -> Bool {
         
@@ -175,7 +175,7 @@ extension RegisterController: UITextViewDelegate {
     }
     
     private func showWebViewerController(with urlString: String) {
-        let vc = WebViewerController(with: urlString)
+        let vc = WebViewerVC(with: urlString)
         let nav = UINavigationController(rootViewController: vc)
         self.present(nav, animated: true, completion: nil)
     }

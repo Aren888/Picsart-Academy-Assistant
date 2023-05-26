@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 enum CustomColorVC {
-    case HomeViewController
+    case HomeVC
     case ChatController
     case NewPostController
     case HomeworkController
@@ -27,7 +27,7 @@ extension UIViewController {
             self.view.backgroundColor = UIColor(red: 0.929, green: 0.812, blue: 0.847, alpha: 1.0)
         case .ProfileController:
             self.view.backgroundColor = UIColor(red: 0.745, green: 0.925, blue: 0.831, alpha: 1.0)
-        case .HomeViewController:
+        case .HomeVC:
             self.view.backgroundColor = UIColor(red: 0.929, green: 0.812, blue: 0.847, alpha: 1.0)
         }
     }

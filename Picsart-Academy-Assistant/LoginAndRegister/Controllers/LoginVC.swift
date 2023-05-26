@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginController: UIViewController {
+class LoginVC: UIViewController {
     
     // MARK: - UI Components
     private let headerView = AuthHeaderView(title: "Sign In", subTitle: "Sign in to your account")
@@ -117,12 +117,12 @@ class LoginController: UIViewController {
     }
     
     @objc private func didTapNewUser() {
-        let vc = RegisterController()
+        let vc = RegisterVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @objc private func didTapForgotPassword() {
-        let vc = ForgotPasswordController()
+        let vc = ForgotPasswordVC()
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
