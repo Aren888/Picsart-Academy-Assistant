@@ -9,7 +9,7 @@ import UIKit
 
 class GetStartedVC: UIViewController {
     
-    private let loadinglabel: UILabel = {
+    private lazy var loadinglabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
         label.text = "Loading..."
@@ -19,7 +19,7 @@ class GetStartedVC: UIViewController {
         return label
     }()
     
-    let welcomeLabel : UILabel = {
+    lazy var welcomeLabel : UILabel = {
         let welcomeLabel = UILabel()
         welcomeLabel.numberOfLines = 2
         welcomeLabel.text = "You Have Successfully\n Entered The Site!"
@@ -30,7 +30,7 @@ class GetStartedVC: UIViewController {
     }()
     
     // Create the "Get Started" button
-    let button: UIButton = {
+    lazy var button: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Get Started", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
@@ -46,8 +46,6 @@ class GetStartedVC: UIViewController {
         setuploadinglabelConstraints(constant: 0)
         getUserName()
     }
-    
-    
     
     func setuploadinglabelConstraints(constant: CGFloat) {
         
@@ -101,7 +99,6 @@ class GetStartedVC: UIViewController {
     
     @objc func getStartedButtonTapped() {
         let vc = CustomTabBarController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
