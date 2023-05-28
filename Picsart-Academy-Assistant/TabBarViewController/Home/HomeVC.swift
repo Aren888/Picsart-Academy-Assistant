@@ -24,15 +24,27 @@ class HomeVC: UIViewController {
 //    let scrollView = UIScrollView()
     var textView: UITextView?
     
+//<<<<<<< HEAD
+//    private let arrayView: [UIView] = {
+//        let newView = UIView()
+//        newView.backgroundColor = UIColor.gray
+//        return [newView]
+//    }()
+//=======
 //    private let arrayView: [UIView] = {
 //        let newView = UIView()
 //        newView.backgroundColor = UIColor.gray
 //        return newView
 //    }()
+//>>>>>>> main
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        setupScrollView()
+//<<<<<<< HEAD
+//    }
+//
+//=======
         configTextView()
     }
     
@@ -41,6 +53,7 @@ class HomeVC: UIViewController {
         textView = UITextView()
         //TODO: - Aren
     }
+//>>>>>>>>>>>>>>>>>>>>>>>>>>> main
 //    func setupScrollView() {
 //        scrollView.translatesAutoresizingMaskIntoConstraints = false
 //        newView.translatesAutoresizingMaskIntoConstraints = false
