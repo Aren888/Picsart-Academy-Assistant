@@ -26,32 +26,32 @@ class HomeVC: UIViewController {
     private let arrayView: [UIView] = {
         let newView = UIView()
         newView.backgroundColor = UIColor.gray
-        return newView
+        return [newView]
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupScrollView()
+//        setupScrollView()
     }
     
-    func setupScrollView() {
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        newView.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        view.addSubview(scrollView)
-        scrollView.addSubview(newView)
-        
-        scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
- 
-        newView.centerXAnchor.constraint(equalTo:  scrollView.centerXAnchor).isActive = true
-        newView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
-        newView.widthAnchor.constraint(equalToConstant: 100).isActive = true
-        newView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-    }
+//    func setupScrollView() {
+//        scrollView.translatesAutoresizingMaskIntoConstraints = false
+//        newView.translatesAutoresizingMaskIntoConstraints = false
+//
+//
+//        view.addSubview(scrollView)
+//        scrollView.addSubview(newView)
+//
+//        scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+//        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+//        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+//
+//        newView.centerXAnchor.constraint(equalTo:  scrollView.centerXAnchor).isActive = true
+//        newView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+//        newView.widthAnchor.constraint(equalToConstant: 100).isActive = true
+//        newView.heightAnchor.constraint(equalToConstant: 100).isActive = true
+//    }
    
 }
 
