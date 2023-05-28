@@ -31,10 +31,10 @@ class CustomTabBarController: UITabBarController {
         nav.tabBarItem.title = title
         nav.tabBarItem.image = image
         nav.viewControllers[0].navigationItem.title = title + "Controller"
-        
-        if nav.tabBarItem.title == "Home" {
-            nav.isNavigationBarHidden = true
-        }
+//        
+//        if nav.tabBarItem.title == "Home" {
+//            nav.isNavigationBarHidden = true
+//        }
         return nav
     }
     
